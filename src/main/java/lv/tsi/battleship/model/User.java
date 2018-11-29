@@ -6,6 +6,16 @@ public class User {
     private Field enemyField = new Field();
     private boolean ready = false;
 
+    public boolean isWinner() {
+        return winner;
+    }
+
+    public void setWinner(boolean winner) {
+        this.winner = winner;
+    }
+
+    private boolean winner = false;
+
 
     public String getName() {
         return name;

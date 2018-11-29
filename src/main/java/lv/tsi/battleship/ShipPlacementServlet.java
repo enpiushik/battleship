@@ -29,7 +29,7 @@ public class ShipPlacementServlet extends HttpServlet {
                 tempShipsHolder.addShip(addr);
             }
         }
-        if (cells == null || cells.length != 20) {
+        if (cells == null || cells.length != 3) {
             errorHolder.setMessage("Please, correct placement!");
             request.getRequestDispatcher("/WEB-INF/pages/shipplacement.jsp")
                     .include(request, response);

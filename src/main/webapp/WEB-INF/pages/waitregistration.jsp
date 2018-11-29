@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Waiting registration</title>
+    <title>waiting registration</title>
     <meta http-equiv="refresh" content="3">
 </head>
 <body>
