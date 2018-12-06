@@ -22,14 +22,15 @@ public class GameServlet extends HttpServlet {
             return;
         }
         myGame.getGame().fire(addr);
-        if (myGame.getGame().isFinished()) {
-            response.sendRedirect("/battleship/result");
-        }
         doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/pages/game.jsp")
-                .include(request, response);
+        if (myGame.getGame().isFinished()) {
+            response.sendRedirect("/battleship/result");
+        } else {
+            request.getRequestDispatcher("/WEB-INF/pages/game.jsp")
+                    .include(request, response);
+        }
     }
 }
